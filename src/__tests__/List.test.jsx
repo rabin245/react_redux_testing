@@ -10,4 +10,10 @@ describe("List component", () => {
     });
     expect(headingElement).toBeInTheDocument();
   });
+
+  it("should render initial state of listData state", () => {
+    render(<List />);
+    const list = screen.getAllByTestId("list-item");
+    expect(list.length).toEqual(1);
+  });
 });
