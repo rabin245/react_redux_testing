@@ -21,4 +21,13 @@ describe("App component", () => {
     const viteLogo = screen.getByAltText(/react logo/i);
     expect(viteLogo).toBeInTheDocument();
   });
+
+  it("should render List component in App component", () => {
+    render(<App />);
+    const headingElement = screen.getByRole("heading", {
+      level: 1,
+      name: /this is a list/i,
+    });
+    expect(headingElement).toBeInTheDocument();
+  });
 });
