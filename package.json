@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint 'src/**/*.{js,jsx}' --ignore-pattern 'src/__tests__/*' --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^18.2.0",
