@@ -1,0 +1,24 @@
+name: Redux testing action
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch 
+        uses: actions/checkout@v4
+      - name: Install Node 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: yarn
+      - name: Install Dependecies
+        run: yarn install
+      - name: Run lint
+        run: yarn lint
+      - name: Build 
+        run: yarn build
+

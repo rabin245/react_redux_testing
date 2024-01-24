@@ -22,7 +22,7 @@ const List = () => {
           );
         })}
       </ul>
-      <button>This button can add a new entry to the list</button>
+      <button>This button can add a new entry to the list (just joking)</button>
     </div>
   );
 };
