@@ -10,6 +10,16 @@ const List = () => {
   ];
   const [listData, setListData] = useState(initialState);
 
+  const handleAddEntry = () => {
+    const newEntry = {
+      id: `${new Date().getSeconds()}`,
+      description: "New Entry",
+      significance: 5,
+    };
+
+    setListData([...listData, newEntry]);
+  };
+
   return (
     <div>
       <h1>This is a list</h1>
@@ -22,7 +32,9 @@ const List = () => {
           );
         })}
       </ul>
-      <button>This button can add a new entry to the list (just joking)</button>
+      <button onClick={handleAddEntry}>
+        This button can add a new entry to the list
+      </button>
     </div>
   );
 };
